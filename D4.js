@@ -20,21 +20,56 @@ console.log("L'area del rettangolo " + lungLato1 + " e " + lungLato2 + " è " + 
  la loro somma moltiplicata per tre.
 */
 
+function crazySum (num1, num2) {
+    if (num1 === num2) {
+        return (num1 + num2) * 3;
+} else {
+        return num1 + num2;
+    }
+}
 
+let result = crazySum(2, 2);
+console.log("il risultato è: " + result); // il risultato è 12
+
+// let result = crazySum(1, 2);
+// console.log("il risultato è: " + result); // il risultato è 3
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff(num) {
+    let absoluteDiff = Math.abs(num - 19);
+    if (absoluteDiff > 19) {
+        return absoluteDiff * 3;
+    } else {
+        return absoluteDiff;
+    }
+}
+
+let risult = crazyDiff(50);
+console.log("Il risultato è: " + risult);
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function boundary(n) {
+    if ((n >= 20 && n <= 100) || n === 400) {
+        return true;
+    } else {
+        return false;
+        
+    }
+}
+
+// let risultato = boundary(150);
+// console.log("Il risultato è " + risultato); // false
+let risultato = boundary(77);
+console.log("Il risultato è " + risultato); // true
+    
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -42,20 +77,42 @@ console.log("L'area del rettangolo " + lungLato1 + " e " + lungLato2 + " è " + 
  ritornare la stringa originale senza alterarla.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function epify(string) {
+    if (string.startsWith("EPICODE")) {
+        return string;
+    } else {
+        return "EPICODE" + string;
+    }
+}
+
+// console.log(epify("Goku")); // "EPICODEGoku"
+console.log(epify("EPICODEGoku")); // "EPICODEGoku"
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7(number) {
+    if (number > 0 && (number % 3 === 0 || number % 7 === 0)) {
+        return true; 
+    } else {
+        return false;
+    }   
+}
+
+console.log(check3and7(6));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function reverseString(str) {
+    const strReversed = str.split("").reverse().join("");
+    return strReversed;
+};
+
+console.log(reverseString("DRAGONBALL"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
