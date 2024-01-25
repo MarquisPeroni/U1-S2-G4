@@ -119,7 +119,17 @@ console.log(reverseString("DRAGONBALL"));
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst(inputString) {
+    let words = inputString.split(" ");
+    let result = words.map(function(word) {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+    return result.join(" ");
+}
+    let inputString = "vegeta is weaker than goku";
+    let resolution = upperFirst(inputString);
+    console.log(resolution); 
+
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
